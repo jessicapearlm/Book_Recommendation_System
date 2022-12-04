@@ -1,0 +1,3 @@
+# Book_Recommendation_System
+
+Recommender systems are algorithms aimed at suggesting relevant items to users (movies, books, products). In general, a library has a Book Search System, both search books by title, author, publisher, and book subject. But with so many book search results displayed, users find it difficult to choose a book of his preference. To overcome this hindrance our application helps users in finding the best book out of similar books recommended. In case of new users our proposed system also recommends the most popular books available. BRS can be used not only to gain more profit but also to enhance the user experience. To implement this we are making use of ML algorithms, flask, and python.
