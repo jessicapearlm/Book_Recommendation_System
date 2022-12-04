@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOK RECOMMENDATION SYSTEM</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<style>
+  .text-white {
+    color: white;
+  }
+  .nav{
+    float: right;
+    margin-right: 50px;
+  }
+  li{
+    color: #000000;
+    float:left;
+  }
+</style>
+<body style="background-color: #A9DBEF">
+    <nav class="navbar" style="background-color: #78A0DC">
+      <a class="navbar-brand " style="margin-left: 50px;color: #000000">BOOK RECOMMENDATION SYSTEM</a>
+      <ul class="nav navbar-nav ">
+        <li><a href="/" style="color: #000000">Home</a></li>
+        <li><a href="/recommend" style="color: #000000">Recommend</a></li>
+        <li><a style="color: #000000">Contact</a></li>
+      </ul>
+    </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <h1 class="text-white" style="font-size:50px ">SEARCH / RECOMMEND BOOKS</h1>
+
+      <form action="/recommend_books" method="POST" >
+        <input name="user_input" type="text" class="form-control"> <br>
+        <input type="submit" class="btn btn-lg btn-warning"><br>
+      </form>
+
+    </div>
+
+    {% if data %}
+      {% for i in data %}
+        <div class="col-md-3" style="margin-top:50px">
+          <div class="card ">
+            <div class="card-body text-center">
+              <img class="card-img-top" src="{{i[2]}}">
+              <p  style="color: #000000">Title - {{i[0]}}</p>
+              <p  style="color: #000000">Author - {{i[1]}}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+
+  </div>
+</div>
+</body>
+</html>
